@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.donggrami_android.databinding.FragmentCharacterSelectBinding
+import com.example.earth1round_aos.databinding.FragmentCharacterSelectBinding
 
 class CharacterSelectFragment : Fragment() {
 
