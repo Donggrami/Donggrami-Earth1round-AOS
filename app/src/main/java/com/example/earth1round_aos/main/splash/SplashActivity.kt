@@ -1,12 +1,12 @@
-package com.example.earth1round_aos.main
+package com.example.earth1round_aos.main.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.example.earth1round_aos.R
 import com.example.earth1round_aos.databinding.ActivitySplashBinding
+import com.example.earth1round_aos.main.MainActivity
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var viewBinding: ActivitySplashBinding
