@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +13,7 @@
         android:layout_height="26dp"
         android:layout_marginTop="50dp"
         android:layout_marginStart="22dp"
-        android:src="@drawable/ic_hamburger_img"
+        android:src="@drawable/ic_hamburger"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -46,36 +47,38 @@
         android:id="@+id/home_daycount_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="5dp"
         android:text="34"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="@+id/home_stepcount_tv"
-        app:layout_constraintEnd_toStartOf="@+id/home_d_day_tv"/>
+        app:layout_constraintTop_toBottomOf="@+id/home_stepcount_tv"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/home_d_day_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="22dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
         android:text="일 째"
         android:textColor="@color/black"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/home_steps_tv"/>
+        app:layout_constraintStart_toEndOf="@id/home_daycount_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/home_daycount_tv"/>
 
 
     <TextView
         android:id="@+id/home_course_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="현재 선택한 코스"
         android:textColor="@color/black"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="@id/home_hamburger_btn_iv"
-        app:layout_constraintTop_toBottomOf="@+id/home_stepcount_tv"/>
+        app:layout_constraintTop_toBottomOf="@+id/home_daycount_tv"/>
 
     <TextView
         android:id="@+id/home_course_percent_count_tv"
@@ -102,5 +105,15 @@
         android:progressBackgroundTint="#DFDFDF"
         app:layout_constraintTop_toBottomOf="@id/home_course_tv"
         app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/home_char_select_iv"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_char_select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

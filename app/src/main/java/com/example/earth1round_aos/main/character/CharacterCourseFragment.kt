@@ -5,7 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.donggrami_android.databinding.FragmentCharacterCourseBinding
+import com.example.earth1round_aos.databinding.FragmentCharacterCourseBinding
+
 
 class CharacterCourseFragment : Fragment() {
 
