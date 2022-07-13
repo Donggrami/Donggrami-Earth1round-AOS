@@ -23,5 +23,4 @@ class CharacterCourseFragment : Fragment() {
         return binding.root
     }
 
-
 }

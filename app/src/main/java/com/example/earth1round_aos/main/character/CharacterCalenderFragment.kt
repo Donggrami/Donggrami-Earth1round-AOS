@@ -21,6 +21,5 @@ class CharacterCalenderFragment : Fragment() {
 
         return binding.root
     }
-
-
+    
 }
