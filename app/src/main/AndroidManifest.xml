@@ -19,6 +19,8 @@
         <activity
             android:name=".main.login.LoginActivity"/>
         <activity android:name=".main.signup.SignUpActivity"/>
+        <activity android:name=".main.signup.SignUpCharNameActivity"/>
+        <activity android:name=".main.signup.SignUpTermsActivity"/>
 
 
         <activity
