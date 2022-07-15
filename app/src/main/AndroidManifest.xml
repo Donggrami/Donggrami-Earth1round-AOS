@@ -13,14 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Earth1roundAOS"
         tools:targetApi="31">
-<<<<<<< HEAD
+
         <activity
             android:name=".main.MainActivity"/>
-        <activity android:name=".main.login.LoginActivity"/>
-=======
-        
-        <activity android:name=".main.MainActivity"/>
->>>>>>> aa64434c77d935ccc240843d370d920718452e54
+        <activity
+            android:name=".main.login.LoginActivity"/>
+
 
         <activity
             android:name=".main.splash.SplashActivity"

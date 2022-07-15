@@ -5,7 +5,6 @@ import android.os.Bundle
 import com.example.earth1round_aos.R
 import com.example.earth1round_aos.databinding.ActivityMainBinding
 import com.example.earth1round_aos.main.home.HomeFragment
-import com.example.earth1round_aos.main.setting.SettingFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
