@@ -29,9 +29,9 @@ class SplashActivity : AppCompatActivity() {
 //            // 현재 Activity (SplashActivity)를 닫기
 //            finish();
 
+            // splash 끝나면 signup 화면 열고 splash activity 닫기
             signup()
 
-            // signup 화면 열기
         }, 3000) // 2000은 지연시간 설정 (2000 -> 2초, 즉 밀리초 단위로 입력해야 함)
     }
 
