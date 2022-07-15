@@ -5,7 +5,7 @@ import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.earth1round_aos.databinding.ActivitySignupBinding
 
-class SignupActivity: AppCompatActivity() {
+class SignUpActivity: AppCompatActivity() {
     lateinit var binding: ActivitySignupBinding
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
