@@ -1,3 +1,1 @@
-# Donggrami-Earth1round-AOS\
-
-[Test] test discord webhook 
+# Donggrami-Earth1round-AOS
