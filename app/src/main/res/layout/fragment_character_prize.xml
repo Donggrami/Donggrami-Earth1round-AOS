@@ -9,32 +9,51 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/character_prize_back"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:text="뒤로가기"
-        android:background="@drawable/button_round"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/character_prize_back_ib"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/img_arrow_left"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/character_prize_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="나의 기록"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/character_prize_back_ib"/>
+
+        <View
+            android:id="@+id/character_prize_view"
+            android:layout_width="0dp"
+            android:layout_height="3px"
+            android:layout_marginTop="10dp"
+            android:background="#D3D3D3"
+            app:layout_constraintTop_toBottomOf="@id/character_prize_back_ib"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/character_prize_record"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:text="날짜    코스    거리\n(이 부분은 나중에\n리사이클러 뷰로 바꿀 것임)"
             android:background="@drawable/button_round"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/character_prize_view"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
