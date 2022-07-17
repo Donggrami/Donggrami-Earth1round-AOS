@@ -20,7 +20,7 @@ class LoginActivity: AppCompatActivity() {
 
         // 카카오 로그인
         binding.loginKakaoLoginCv.setOnClickListener {
-            kakao()
+            kLogin()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
@@ -28,7 +28,7 @@ class LoginActivity: AppCompatActivity() {
 
         // 구글 로그인
         binding.loginGoogleLoginCv.setOnClickListener {
-            google()
+            gLogin()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
@@ -42,11 +42,11 @@ class LoginActivity: AppCompatActivity() {
 
     }
 
-    private fun kakao(){
+    private fun kLogin(){
 
     }
 
-    private fun google(){
+    private fun gLogin(){
 
     }
 }

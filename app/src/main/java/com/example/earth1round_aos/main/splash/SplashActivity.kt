@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import com.example.earth1round_aos.databinding.ActivitySplashBinding
 import com.example.earth1round_aos.main.MainActivity
+import com.example.earth1round_aos.main.login.LoginActivity
 import com.example.earth1round_aos.main.signup.SignUpTermsActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -36,7 +37,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun signup(){
-        startActivity(Intent(this, SignUpTermsActivity::class.java))
+        startActivity(Intent(this, LoginActivity::class.java))
         finish()
     }
 }
