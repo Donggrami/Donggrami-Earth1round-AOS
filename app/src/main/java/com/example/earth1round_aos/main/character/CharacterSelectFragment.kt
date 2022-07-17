@@ -4,22 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.earth1round_aos.databinding.FragmentCharacterSelectBinding
 
-class CharacterSelectFragment : Fragment() {
+class CharacterSelectFragment : AppCompatActivity() {
 
-    lateinit var binding: FragmentCharacterSelectBinding
+    lateinit var binding : FragmentCharacterSelectBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-
-        binding = FragmentCharacterSelectBinding.inflate(inflater, container, false)
-
-        return binding.root
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = FragmentCharacterSelectBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.characterSelectBackIb.setOnClickListener {
+            finish()
+        }
     }
 
 

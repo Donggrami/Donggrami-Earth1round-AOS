@@ -4,28 +4,25 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/character_course_back"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:text="뒤로가기"
-        android:background="@drawable/button_round"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <FrameLayout
         android:id="@+id/character_course_map_fl"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="450dp"
         android:background="#808080"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_course_back"/>
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/character_course_back_ib"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/img_arrow_left"
+        android:background="#808080"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/character_course_start"
@@ -55,10 +52,10 @@
         app:layout_constraintTop_toBottomOf="@id/character_course_map_fl" />
 
     <TextView
-        android:id="@+id/character_course_between"
+        android:id="@+id/character_course_between_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:text="두 지점 사이의 거리\n1km"
         android:textAlignment="center"
         android:textColor="@color/black"

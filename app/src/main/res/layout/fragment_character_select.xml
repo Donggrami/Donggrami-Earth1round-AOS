@@ -5,10 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageButton
-        android:id="@+id/character_select_back"
+        android:id="@+id/character_select_back_ib"
         android:layout_width="45dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="30dp"
         android:src="@drawable/img_arrow_left"
         android:background="@color/white"
@@ -16,21 +16,26 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/character_select_tv"
-        android:layout_width="wrap_content"
+        android:id="@+id/character_select_title_tv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:text="캐릭터 커스텀"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
         android:textAlignment="center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/character_select_back_ib"/>
+
+    <View
+        android:id="@+id/character_select_view"
+        android:layout_width="0dp"
+        android:layout_height="3px"
+        android:layout_marginTop="10dp"
+        android:background="#D3D3D3"
+        app:layout_constraintTop_toBottomOf="@id/character_select_back_ib"/>
 
     <ImageView
-        android:id="@+id/character_select_character"
+        android:id="@+id/character_select_character_iv"
         android:layout_width="230dp"
         android:layout_height="230dp"
         android:layout_marginTop="130dp"
@@ -48,7 +53,7 @@
         android:textSize="20sp"
         android:background="@drawable/button_round"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/character_select_character"/>
+        app:layout_constraintTop_toBottomOf="@id/character_select_character_iv"/>
 
     <ScrollView
         android:id="@+id/character_select_custom_sv"
