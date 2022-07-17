@@ -107,6 +107,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_kakao_signup_cv"/>
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"
+        app:layout_constraintStart_toStartOf="@+id/signup_look_around_tv"
+        app:layout_constraintEnd_toEndOf="@+id/signup_look_around_tv"
+        app:layout_constraintTop_toBottomOf="@+id/signup_look_around_tv"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

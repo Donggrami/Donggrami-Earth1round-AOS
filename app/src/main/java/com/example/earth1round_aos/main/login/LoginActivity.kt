@@ -11,8 +11,8 @@ import com.example.earth1round_aos.main.signup.SignUpActivity
 class LoginActivity: AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -20,7 +20,7 @@ class LoginActivity: AppCompatActivity() {
 
         // 카카오 로그인
         binding.loginKakaoLoginCv.setOnClickListener {
-            kakao()
+            kLogin()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
@@ -28,7 +28,7 @@ class LoginActivity: AppCompatActivity() {
 
         // 구글 로그인
         binding.loginGoogleLoginCv.setOnClickListener {
-            google()
+            gLogin()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
@@ -37,16 +37,15 @@ class LoginActivity: AppCompatActivity() {
         // 회원이 아닐 경우
         binding.loginNotMemberYetTv.setOnClickListener {
             startActivity(Intent(this,SignUpActivity::class.java))
-            finish()
         }
 
     }
 
-    private fun kakao(){
+    private fun kLogin(){
 
     }
 
-    private fun google(){
+    private fun gLogin(){
 
     }
 }
