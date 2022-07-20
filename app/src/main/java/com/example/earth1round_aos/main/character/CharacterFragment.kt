@@ -10,7 +10,7 @@ import com.example.earth1round_aos.R
 import com.example.earth1round_aos.databinding.FragmentCharacterBinding
 import com.example.earth1round_aos.main.MainActivity
 import com.example.earth1round_aos.main.home.HomeFragment
-import com.example.earth1round_aos.main.setting.SettingFragment
+import com.example.earth1round_aos.main.setting.SettingActivity
 
 class CharacterFragment : Fragment() {
 
@@ -25,8 +25,9 @@ class CharacterFragment : Fragment() {
         binding = FragmentCharacterBinding.inflate(inflater, container, false)
 
         binding.characterHamburgerBtnIv.setOnClickListener {
-            (context as MainActivity).supportFragmentManager.beginTransaction()
-                .replace(R.id. main_frm, SettingFragment()).commitAllowingStateLoss()
+//            (context as MainActivity).supportFragmentManager.beginTransaction()
+//                .replace(R.id. main_frm, SettingFragment()).commitAllowingStateLoss()
+            startActivity(Intent(requireActivity(), SettingActivity::class.java))
         }
 
         binding.characterHomeTrophyIv.setOnClickListener {

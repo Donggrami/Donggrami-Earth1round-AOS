@@ -5,6 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACTIVITY"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <ImageView
         android:id="@+id/setting_close_iv"
         android:layout_width="24dp"
@@ -62,15 +71,15 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-<!--    <ImageView-->
-<!--        android:id="@+id/setting_logout_iv"-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="39dp"-->
-<!--        android:layout_marginTop="150dp"-->
-<!--        android:layout_marginEnd="22dp"-->
-<!--        android:src="@drawable/ic_logout"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/setting_close_iv"/>-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/setting_logout_iv"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="39dp"-->
+    <!--        android:layout_marginTop="150dp"-->
+    <!--        android:layout_marginEnd="22dp"-->
+    <!--        android:src="@drawable/ic_logout"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/setting_close_iv"/>-->
 
 
     <View
@@ -104,47 +113,65 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:id="@+id/setting_edit_profile_img_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/setting_edit_profile_img_cl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_marginTop="15dp"
             android:layout_marginStart="7dp"
-            android:text="프로필 이미지 수정"
-            android:textSize="16sp"
-            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/setting_edit_profile_tv"/>
+            app:layout_constraintTop_toBottomOf="@+id/setting_edit_profile_tv">
 
-        <ImageView
-            android:id="@+id/setting_edit_profile_img_arrow_iv"
-            android:layout_width="6dp"
-            android:layout_height="12dp"
-            android:src="@drawable/ic_arrow_right"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/setting_edit_profile_img_tv"
-            app:layout_constraintBottom_toBottomOf="@+id/setting_edit_profile_img_tv"/>
+            <TextView
+                android:id="@+id/setting_edit_profile_img_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="프로필 이미지 수정"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:id="@+id/setting_edit_profile_name_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            <ImageView
+                android:id="@+id/setting_edit_profile_img_arrow_"
+                android:layout_width="6dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_arrow_right_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/setting_edit_profile_img_"
+                app:layout_constraintBottom_toBottomOf="@+id/setting_edit_profile_img_"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/setting_edit_profile_name_cl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_marginStart="7dp"
-            android:text="닉네임 수정"
-            android:textSize="16sp"
-            android:textColor="@color/black"
+            android:layout_marginTop="6dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/setting_edit_profile_img_tv"/>
+            app:layout_constraintTop_toBottomOf="@id/setting_edit_profile_img_cl">
 
-        <ImageView
-            android:id="@+id/setting_edit_profile_name_arrow_iv"
-            android:layout_width="6dp"
-            android:layout_height="12dp"
-            android:src="@drawable/ic_arrow_right"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/setting_edit_profile_name_tv"
-            app:layout_constraintBottom_toBottomOf="@+id/setting_edit_profile_name_tv"/>
+            <TextView
+                android:id="@+id/setting_edit_profile_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="닉네임 수정"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/setting_edit_profile_name_arrow_iv"
+                android:layout_width="6dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_arrow_right_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/setting_edit_profile_name_tv"
+                app:layout_constraintBottom_toBottomOf="@+id/setting_edit_profile_name_tv"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
