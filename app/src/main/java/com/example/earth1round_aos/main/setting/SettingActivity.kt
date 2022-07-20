@@ -22,14 +22,25 @@ class SettingActivity: AppCompatActivity() {
 
         // 프로필 이미지 수정 클릭
         binding.settingEditProfileImgCl.setOnClickListener {
-
+            editImg()
         }
 
 
         // 닉데임 수정 클릭
         binding.settingEditProfileNameCl.setOnClickListener {
-
+            editName()
         }
     }
 
+    private fun editImg(){
+        var dialog = EditImgBottomSheetDialog()
+
+        dialog.show(this.supportFragmentManager, dialog.tag)
+    }
+
+    private fun editName(){
+        var dialog = EditNameBottomSheetDialog()
+
+        dialog.show(this.supportFragmentManager, dialog.tag)
+    }
 }
