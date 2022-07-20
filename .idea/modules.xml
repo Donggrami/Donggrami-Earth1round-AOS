@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Earth1round-AOS.iml" filepath="$PROJECT_DIR$/.idea/modules/Earth1round-AOS.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.main.iml" />

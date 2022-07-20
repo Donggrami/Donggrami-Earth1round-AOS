@@ -4,35 +4,95 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/character_calender_back"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+
+        <ImageButton
+            android:id="@+id/character_calender_back_ib"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/img_arrow_left"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/character_calender_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="캘린더"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="@id/character_calender_back_ib"/>
+
+
+    <View
+        android:id="@+id/character_calender_view"
+        android:layout_width="0dp"
+        android:layout_height="3px"
+        android:layout_marginTop="10dp"
+        android:background="#D3D3D3"
+        app:layout_constraintTop_toBottomOf="@id/character_calender_back_ib"/>
+
+    <TextView
+        android:id="@+id/character_home_cumulate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="뒤로가기"
-        android:background="@drawable/button_round"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="누적된 걸음 수"
+        app:layout_constraintTop_toBottomOf="@id/character_calender_view"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/character_home_cumulate_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="20,000"
+        app:layout_constraintStart_toStartOf="@id/character_home_cumulate_tv"
+        app:layout_constraintTop_toBottomOf="@id/character_home_cumulate_tv" />
+
+    <TextView
+        android:id="@+id/character_home_cumulate_korean_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="7dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="걸음"
+        app:layout_constraintStart_toEndOf="@id/character_home_cumulate_num_tv"
+        app:layout_constraintBottom_toBottomOf="@id/character_home_cumulate_num_tv"/>
+
 
     <TextView
         android:id="@+id/character_calender_month_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="180dp"
         android:text="7월"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageButton
-        android:id="@+id/character_calender_left_tv"
+        android:id="@+id/character_calender_left_ib"
         android:layout_width="45dp"
-        android:layout_height="35dp"
+        android:layout_height="25dp"
         android:layout_marginStart="70dp"
         android:src="@drawable/img_arrow_left"
         android:background="@color/white"
@@ -41,9 +101,9 @@
         app:layout_constraintBottom_toBottomOf="@id/character_calender_month_tv"/>
 
     <ImageButton
-        android:id="@+id/character_calender_right_tv"
+        android:id="@+id/character_calender_right_ib"
         android:layout_width="45dp"
-        android:layout_height="35dp"
+        android:layout_height="25dp"
         android:layout_marginEnd="70dp"
         android:src="@drawable/img_arrow_right"
         android:background="@color/white"
@@ -54,7 +114,7 @@
     <FrameLayout
         android:id="@+id/character_calender_day_fl"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="400dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="40dp"
@@ -62,18 +122,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/character_calender_month_tv"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/character_calender_cumulate"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="40dp"
-        android:text="누적 걸음 수"
-        android:background="@drawable/button_round"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_calender_day_fl"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
