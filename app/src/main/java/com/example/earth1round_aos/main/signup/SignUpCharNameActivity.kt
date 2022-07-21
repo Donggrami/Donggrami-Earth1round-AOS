@@ -16,6 +16,12 @@ class SignUpCharNameActivity: AppCompatActivity() {
         binding = ActivitySignupCharnameBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 돌아가기
+        binding.signupCharnameBackIc.setOnClickListener {
+            finish()
+        }
+
+
         //이름 입력하기 끝내고 어플 시작하기
         binding.signupCharnameStartCv.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))

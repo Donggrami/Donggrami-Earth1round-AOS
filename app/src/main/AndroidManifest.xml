@@ -21,7 +21,7 @@
         <activity android:name=".main.signup.SignUpActivity"/>
         <activity android:name=".main.signup.SignUpCharNameActivity"/>
         <activity android:name=".main.signup.SignUpTermsActivity"/>
-
+        <activity android:name=".main.setting.SettingActivity"/>
 
         <activity
             android:name=".main.splash.SplashActivity"

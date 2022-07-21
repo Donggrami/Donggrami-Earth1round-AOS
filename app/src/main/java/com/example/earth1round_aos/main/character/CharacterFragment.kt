@@ -10,6 +10,7 @@ import com.example.earth1round_aos.R
 import com.example.earth1round_aos.databinding.FragmentCharacterBinding
 import com.example.earth1round_aos.main.MainActivity
 import com.example.earth1round_aos.main.home.HomeFragment
+import com.example.earth1round_aos.main.setting.SettingActivity
 
 class CharacterFragment : Fragment() {
 
@@ -23,7 +24,16 @@ class CharacterFragment : Fragment() {
 
         binding = FragmentCharacterBinding.inflate(inflater, container, false)
 
+<<<<<<< HEAD
         //화면 넘어가기
+=======
+        binding.characterHamburgerBtnIv.setOnClickListener {
+//            (context as MainActivity).supportFragmentManager.beginTransaction()
+//                .replace(R.id. main_frm, SettingFragment()).commitAllowingStateLoss()
+            startActivity(Intent(requireActivity(), SettingActivity::class.java))
+        }
+
+>>>>>>> 28e68f0a651332c56973ef6bedff917976dc68ad
         binding.characterHomeTrophyIv.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, CharacterPrizeFragment()).commitAllowingStateLoss()

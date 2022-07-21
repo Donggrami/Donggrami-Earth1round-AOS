@@ -14,10 +14,19 @@ class SignUpTermsActivity: AppCompatActivity() {
         binding = ActivitySignupTermsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 화면 넘어가기
+        // 돌아가기
+        binding.signupTermBackIc.setOnClickListener {
+            finish()
+        }
+
+
+        // 이용약관 화살표 누르면 약관 상세내용 dialog로 뜨게
+
+
+        // 캐릭터 이름설정 화면으로 넘어가기
         binding.signupTermOkCv.setOnClickListener {
             startActivity(Intent(this, SignUpCharNameActivity::class.java))
-            finish()
+//            finish()
         }
     }
 }
