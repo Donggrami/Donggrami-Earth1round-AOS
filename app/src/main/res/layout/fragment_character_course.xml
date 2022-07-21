@@ -13,8 +13,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+<<<<<<< HEAD
     <ImageView
         android:id="@+id/character_course_back_ib"
+=======
+    
+    <ImageView
+        android:id="@+id/character_course_back_iv"
+>>>>>>> ddbdb74d43e5538f0712ce5b382d198872d8304f
         android:layout_width="12dp"
         android:layout_height="24dp"
         android:layout_marginTop="50dp"
@@ -23,10 +29,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/character_course_start"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginTop="20dp"
         android:layout_marginStart="40dp"
         android:text="출발지\n선택"
@@ -39,8 +46,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/character_course_end"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:text="도착지\n선택"
@@ -54,13 +61,23 @@
         android:id="@+id/character_course_between_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:text="두 지점 사이의 거리\n1km"
+        android:layout_marginBottom="90dp"
+        android:text="두 지점 사이의 거리"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1km"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/character_course_between_tv"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
