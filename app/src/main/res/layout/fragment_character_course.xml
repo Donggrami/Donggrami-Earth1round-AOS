@@ -13,14 +13,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageButton
+    <ImageView
         android:id="@+id/character_course_back_ib"
-        android:layout_width="45dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="30dp"
-        android:src="@drawable/img_arrow_left"
-        android:background="#808080"
+        android:layout_width="12dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="22dp"
+        android:src="@drawable/ic_arrow_left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
