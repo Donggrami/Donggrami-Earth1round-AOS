@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.donggrami.main.character.CharacterCalenderFragment"
+            android:name="com.example.donggrami.main.character.CharacterCalenderActivity"
             android:exported="true"/>
         <activity
             android:name="com.example.donggrami.main.character.CharacterCourseFragment"

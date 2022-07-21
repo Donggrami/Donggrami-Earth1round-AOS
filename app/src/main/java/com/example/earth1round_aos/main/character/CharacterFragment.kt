@@ -24,26 +24,33 @@ class CharacterFragment : Fragment() {
 
         binding = FragmentCharacterBinding.inflate(inflater, container, false)
 
+<<<<<<< HEAD
+        //화면 넘어가기
+=======
         binding.characterHamburgerBtnIv.setOnClickListener {
 //            (context as MainActivity).supportFragmentManager.beginTransaction()
 //                .replace(R.id. main_frm, SettingFragment()).commitAllowingStateLoss()
             startActivity(Intent(requireActivity(), SettingActivity::class.java))
         }
 
+>>>>>>> 28e68f0a651332c56973ef6bedff917976dc68ad
         binding.characterHomeTrophyIv.setOnClickListener {
-            startActivity(Intent(activity, CharacterPrizeFragment::class.java))
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, CharacterPrizeFragment()).commitAllowingStateLoss()
         }
 
         binding.characterHomeCharacterIv.setOnClickListener {
-            startActivity(Intent(activity, CharacterSelectFragment::class.java))
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, CharacterSelectFragment()).commitAllowingStateLoss()
         }
 
         binding.characterHomeSelectCourse.setOnClickListener {
-            startActivity(Intent(activity, CharacterCourseFragment::class.java))
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, CharacterCourseFragment()).commitAllowingStateLoss()
         }
 
         binding.characterHomeCumulateNumTv.setOnClickListener {
-            startActivity(Intent(activity, CharacterCalenderFragment::class.java))
+            startActivity(Intent(activity, CharacterCalenderActivity::class.java))
         }
 
         binding.characterHomeGoEarth.setOnClickListener {
@@ -54,8 +61,4 @@ class CharacterFragment : Fragment() {
         return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        //binding = null
-    }
 }
