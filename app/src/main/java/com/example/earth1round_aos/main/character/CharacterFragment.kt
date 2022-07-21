@@ -24,19 +24,23 @@ class CharacterFragment : Fragment() {
         binding = FragmentCharacterBinding.inflate(inflater, container, false)
 
         binding.characterHomeTrophyIv.setOnClickListener {
-            startActivity(Intent(activity, CharacterPrizeFragment::class.java))
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, CharacterPrizeFragment()).commitAllowingStateLoss()
         }
 
         binding.characterHomeCharacterIv.setOnClickListener {
-            startActivity(Intent(activity, CharacterSelectFragment::class.java))
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, CharacterSelectFragment()).commitAllowingStateLoss()
         }
 
         binding.characterHomeSelectCourse.setOnClickListener {
-            startActivity(Intent(activity, CharacterCourseFragment::class.java))
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, CharacterCourseFragment()).commitAllowingStateLoss()
         }
 
         binding.characterHomeCumulateNumTv.setOnClickListener {
-            startActivity(Intent(activity, CharacterCalenderFragment::class.java))
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, CharacterCalenderFragment()).commitAllowingStateLoss()
         }
 
         binding.characterHomeGoEarth.setOnClickListener {

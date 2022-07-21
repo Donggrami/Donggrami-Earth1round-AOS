@@ -1,21 +1,33 @@
 package com.example.donggrami.main.character
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.example.earth1round_aos.R
 import com.example.earth1round_aos.databinding.FragmentCharacterCalenderBinding
+import com.example.earth1round_aos.main.MainActivity
 
-class CharacterCalenderFragment : AppCompatActivity() {
+class CharacterCalenderFragment : Fragment() {
 
     lateinit var binding : FragmentCharacterCalenderBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = FragmentCharacterCalenderBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        binding.characterCalenderBackIb.setOnClickListener {
-            finish()
-        }
-    }
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
+        binding = FragmentCharacterCalenderBinding.inflate(inflater, container, false)
+
+        binding.characterCalenderBackIb.setOnClickListener {
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id. main_frm, CharacterFragment()).commitAllowingStateLoss()
+        }
+
+
+        return binding.root
+    }
 
 }
