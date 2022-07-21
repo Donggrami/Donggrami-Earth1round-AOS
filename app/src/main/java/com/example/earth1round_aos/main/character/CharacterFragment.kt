@@ -23,6 +23,7 @@ class CharacterFragment : Fragment() {
 
         binding = FragmentCharacterBinding.inflate(inflater, container, false)
 
+        //화면 넘어가기
         binding.characterHomeTrophyIv.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, CharacterPrizeFragment()).commitAllowingStateLoss()
@@ -39,8 +40,7 @@ class CharacterFragment : Fragment() {
         }
 
         binding.characterHomeCumulateNumTv.setOnClickListener {
-            (context as MainActivity).supportFragmentManager.beginTransaction()
-                .replace(R.id.main_frm, CharacterCalenderFragment()).commitAllowingStateLoss()
+            startActivity(Intent(activity, CharacterCalenderActivity::class.java))
         }
 
         binding.characterHomeGoEarth.setOnClickListener {
@@ -51,8 +51,4 @@ class CharacterFragment : Fragment() {
         return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        //binding = null
-    }
 }

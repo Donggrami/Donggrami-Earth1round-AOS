@@ -21,6 +21,7 @@ class CharacterPrizeFragment : Fragment() {
 
         binding = FragmentCharacterPrizeBinding.inflate(inflater, container, false)
 
+        //화면 돌아가기
         binding.characterPrizeBackIb.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id. main_frm, CharacterFragment()).commitAllowingStateLoss()

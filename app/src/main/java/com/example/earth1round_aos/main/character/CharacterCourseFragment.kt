@@ -22,6 +22,7 @@ class CharacterCourseFragment : Fragment() {
 
         binding = FragmentCharacterCourseBinding.inflate(inflater, container, false)
 
+        //화면 돌아가기
         binding.characterCourseBackIb.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id. main_frm, CharacterFragment()).commitAllowingStateLoss()

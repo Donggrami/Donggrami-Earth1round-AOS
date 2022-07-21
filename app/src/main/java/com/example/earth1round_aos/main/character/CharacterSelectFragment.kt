@@ -21,6 +21,7 @@ class CharacterSelectFragment : Fragment() {
 
         binding = FragmentCharacterSelectBinding.inflate(inflater, container, false)
 
+        //화면 돌아가기
         binding.characterSelectBackIb.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id. main_frm, CharacterFragment()).commitAllowingStateLoss()
