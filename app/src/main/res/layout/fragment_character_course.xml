@@ -13,9 +13,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+<<<<<<< HEAD
+    <ImageView
+        android:id="@+id/character_course_back_ib"
+=======
     
     <ImageView
         android:id="@+id/character_course_back_iv"
+>>>>>>> ddbdb74d43e5538f0712ce5b382d198872d8304f
         android:layout_width="12dp"
         android:layout_height="24dp"
         android:layout_marginTop="50dp"
