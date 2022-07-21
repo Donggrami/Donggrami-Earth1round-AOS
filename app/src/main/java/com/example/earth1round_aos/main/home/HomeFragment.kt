@@ -11,6 +11,7 @@ import com.example.donggrami.main.character.CharacterFragment
 import com.example.earth1round_aos.R
 import com.example.earth1round_aos.databinding.FragmentHomeBinding
 import com.example.earth1round_aos.main.MainActivity
+import com.example.earth1round_aos.main.character.MapsActivity
 import com.example.earth1round_aos.main.setting.SettingActivity
 
 class HomeFragment : Fragment() {
@@ -25,6 +26,10 @@ class HomeFragment : Fragment() {
 
         Log.d("SUCCESS ", "HomeFragment")
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        binding.homeMap.setOnClickListener {
+            startActivity(Intent(requireActivity(),MapsActivity::class.java))
+        }
 
         binding.homeHamburgerBtnIv.setOnClickListener {
             startActivity(Intent(requireActivity(),SettingActivity::class.java))
