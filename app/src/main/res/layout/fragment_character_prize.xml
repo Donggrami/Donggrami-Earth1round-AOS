@@ -12,7 +12,7 @@
 
 
         <ImageView
-            android:id="@+id/character_prize_back_ib"
+            android:id="@+id/character_prize_back_iv"
             android:layout_width="12dp"
             android:layout_height="24dp"
             android:layout_marginTop="50dp"
@@ -31,7 +31,7 @@
             android:textColor="@color/black"
             android:textSize="22sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="@id/character_prize_back_ib"/>
+            app:layout_constraintTop_toTopOf="@id/character_prize_back_iv"/>
 
         <View
             android:id="@+id/character_prize_view"
@@ -39,7 +39,7 @@
             android:layout_height="3px"
             android:layout_marginTop="10dp"
             android:background="#D3D3D3"
-            app:layout_constraintTop_toBottomOf="@id/character_prize_back_ib"/>
+            app:layout_constraintTop_toBottomOf="@id/character_prize_back_iv"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/character_prize_rv"
