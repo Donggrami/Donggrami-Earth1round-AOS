@@ -26,10 +26,11 @@ class CharacterFragment : Fragment() {
 
 
         //화면 넘어가기
+<<<<<<< HEAD
 
+=======
+>>>>>>> 112ff21f4ea313cc279d8f7c04693a034fece0e8
         binding.characterHamburgerBtnIv.setOnClickListener {
-//            (context as MainActivity).supportFragmentManager.beginTransaction()
-//                .replace(R.id. main_frm, SettingFragment()).commitAllowingStateLoss()
             startActivity(Intent(requireActivity(), SettingActivity::class.java))
         }
 
