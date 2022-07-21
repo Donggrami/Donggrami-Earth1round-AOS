@@ -7,6 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Earth1round-AOS.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/git.Earth1round-AOS.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/git.Earth1round-AOS.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/git.Earth1round-AOS.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/git.Earth1round-AOS.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/git.Earth1round-AOS.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/git.Earth1round-AOS.app.unitTest.iml" />
     </modules>
   </component>
 </project>
