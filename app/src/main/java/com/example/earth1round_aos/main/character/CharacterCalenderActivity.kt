@@ -25,7 +25,7 @@ class CharacterCalenderActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.fragment_character_calender)
 
         //화면 돌아가기
-        binding.characterCalenderBackIb.setOnClickListener {
+        binding.characterCalenderBackIv.setOnClickListener {
             finish()
         }
 
