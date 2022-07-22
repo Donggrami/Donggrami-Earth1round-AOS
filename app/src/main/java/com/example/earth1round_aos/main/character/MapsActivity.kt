@@ -2,6 +2,7 @@ package com.example.earth1round_aos.main.character
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.earth1round_aos.R
 import com.example.earth1round_aos.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory

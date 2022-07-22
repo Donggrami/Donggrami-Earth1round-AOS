@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout
-        android:id="@+id/character_course_map_fl"
+        android:id="@+id/character_course_map_frm"
         android:layout_width="match_parent"
         android:layout_height="450dp"
         android:background="#808080"
@@ -13,14 +13,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-<<<<<<< HEAD
-    <ImageView
-        android:id="@+id/character_course_back_ib"
-=======
-    
     <ImageView
         android:id="@+id/character_course_back_iv"
->>>>>>> ddbdb74d43e5538f0712ce5b382d198872d8304f
         android:layout_width="12dp"
         android:layout_height="24dp"
         android:layout_marginTop="50dp"
@@ -41,7 +35,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_course_map_fl" />
+        app:layout_constraintTop_toBottomOf="@id/character_course_map_frm" />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -55,7 +49,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_course_map_fl" />
+        app:layout_constraintTop_toBottomOf="@id/character_course_map_frm" />
 
     <TextView
         android:id="@+id/character_course_between_tv"

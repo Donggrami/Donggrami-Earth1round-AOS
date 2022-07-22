@@ -4,15 +4,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.earth1round_aos.R
 import com.example.earth1round_aos.databinding.FragmentCharacterCourseBinding
 import com.example.earth1round_aos.main.MainActivity
+import com.example.earth1round_aos.main.character.MapsActivity
+import com.example.earth1round_aos.main.home.HomeFragment
 
 
 class CharacterCourseFragment : Fragment() {
 
     lateinit var binding : FragmentCharacterCourseBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,5 +36,5 @@ class CharacterCourseFragment : Fragment() {
         return binding.root
     }
 
-
 }
+
