@@ -22,11 +22,11 @@ class PrizeRVAdapter(private val prizeList: ArrayList<Prize>): RecyclerView.Adap
     inner class ViewHolder(val binding: FragmentCharacterPrizeItemBinding): RecyclerView.ViewHolder(binding.root){
 
         fun bind(prize: Prize){
-            binding.characterPrizeItemYear.text = prize.year
-            binding.characterPrizeItemMonth.text = prize.month
-            binding.characterPrizeItemDate.text = prize.date
-            binding.characterPrizeItemCourse.text = prize.course
-            binding.characterPrizeItemDistance.text = prize.distance
+            binding.characterPrizeItemYearTv.text = prize.year
+            binding.characterPrizeItemMonthTv.text = prize.month
+            binding.characterPrizeItemDateTv.text = prize.date
+            binding.characterPrizeItemCourseTv.text = prize.course
+            binding.characterPrizeItemDistanceTv.text = prize.distance
 
         }
 
