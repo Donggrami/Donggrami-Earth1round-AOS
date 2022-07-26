@@ -45,8 +45,6 @@ class CharacterSelectFragment : Fragment() {
             add(Select(R.drawable.img_character_character))
             add(Select(R.drawable.img_character_character))
             add(Select(R.drawable.img_character_character))
-
-
         }
 
         val selectRVAdapter = SelectRVAdapter(selectDatas)
