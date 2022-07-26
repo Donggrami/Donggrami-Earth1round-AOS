@@ -4,14 +4,23 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <FrameLayout
-        android:id="@+id/character_course_map_fl"
+    <fragment
+        android:id="@+id/character_course_map"
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        android:background="#808080"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/character_course_map_frm"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="450dp"-->
+<!--        android:background="#808080"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
 
     <ImageView
         android:id="@+id/character_course_back_iv"
@@ -35,7 +44,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_course_map_fl" />
+        app:layout_constraintTop_toBottomOf="@id/character_course_map" />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -49,7 +58,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_course_map_fl" />
+        app:layout_constraintTop_toBottomOf="@id/character_course_map" />
 
     <TextView
         android:id="@+id/character_course_between_tv"
