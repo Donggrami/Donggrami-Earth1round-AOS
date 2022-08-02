@@ -3,6 +3,7 @@ package com.example.earth1round_aos.main.login
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.earth1round_aos.databinding.ActivityLoginBinding
 import com.example.earth1round_aos.main.MainActivity
@@ -21,6 +22,7 @@ class LoginActivity: AppCompatActivity() {
         // 카카오 로그인
         binding.loginKakaoLoginCv.setOnClickListener {
             kLogin()
+            Toast.makeText(this, "카카오톡 로그인", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
@@ -29,6 +31,7 @@ class LoginActivity: AppCompatActivity() {
         // 구글 로그인
         binding.loginGoogleLoginCv.setOnClickListener {
             gLogin()
+            Toast.makeText(this, "구글 로그인", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }

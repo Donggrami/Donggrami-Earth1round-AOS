@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.earth1round_aos.R
@@ -12,6 +13,7 @@ import com.example.earth1round_aos.main.MainActivity
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import java.lang.Math.cos
 import java.lang.Math.sin
@@ -20,11 +22,14 @@ import kotlin.math.pow
 import kotlin.math.sqrt
 
 
-class CharacterCourseFragment : Fragment(), OnMapReadyCallback {
+class CharacterCourseFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     lateinit var binding : FragmentCharacterCourseBinding
     lateinit var seoul: LatLng
     lateinit var sydney: LatLng
+
+//    lateinit var str1: String
+//    lateinit var str2: String
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -54,10 +59,10 @@ class CharacterCourseFragment : Fragment(), OnMapReadyCallback {
 
 
         // 출발지 도착지 선택
+//        binding.courseStartTv.text = onMarkerClick(Seoul)
 
 
-        // 거리 적용
-        //var d = distance(seoul,sydney).toString()
+        // 거리 적용 나중에 출발지 선택지 들어갈 예정
         val str = "${distance(seoul,sydney)} km"
         binding.characterCourseDistance.text = str
 
@@ -68,24 +73,76 @@ class CharacterCourseFragment : Fragment(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
 
         // 구글 지도에 좌표 표시
-        googleMap.addMarker(
+        var Seoul = googleMap.addMarker(
             MarkerOptions()
                 .position(seoul)
-                .title("MarkSeoul")
+                .title("Seoul")
+                .snippet("in 대한민국")
         )
 
-
-        googleMap.addMarker(
+        // 구글 지도에 좌표 표시
+        var Sydney = googleMap.addMarker(
             MarkerOptions()
                 .position(sydney)
-                .title("Marker in Sydney")
+                .title("Sydney")
+                .snippet("in 호주")
                 .icon(
                     BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
         )
 
         // 핀에 맞춰서 카메라 설정
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(seoul))
+
+        googleMap.setOnMarkerClickListener(this)
+
+        googleMap.uiSettings.isZoomControlsEnabled
     }
+
+//    override fun onMarkerClick(marker: Marker): String {
+//
+////        var str1: String
+//
+//        Toast.makeText(
+//            requireActivity(),
+//            "${marker.title} is clicked",
+//            Toast.LENGTH_SHORT
+//        ).show()
+//
+//        var str1 = marker.title
+//
+//        return str1
+//    }
+
+    override fun onMarkerClick(marker: Marker): Boolean {
+
+//        var str1: String
+
+        Toast.makeText(
+            requireActivity(),
+            "${marker.title} is clicked",
+            Toast.LENGTH_SHORT
+        ).show()
+
+        var str1 = marker.title
+
+        return true
+    }
+
+
+    // 이름 받아오는 함수
+//    private fun getMarkerTitle(marker: Marker){
+//        var str1 = marker.title
+//    }
+//    private fun getMarkerCountry(marker: Marker){
+//        var str2 = marker.snippet
+//    }
+//    private fun setMarkerTitle(): String{
+//        return str1
+//    }
+//    private fun setMarkerCountry(): String{
+//        return str2
+//    }
+//
 
 }
 
