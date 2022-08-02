@@ -43,6 +43,9 @@ dependencies {
     //google Maps
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
 
+    //progress bar
+    implementation 'com.akexorcist:round-corner-progress-bar:2.1.2'
+
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'com.android.databinding:viewbinding:4.0.1'
