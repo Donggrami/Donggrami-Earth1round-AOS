@@ -20,11 +20,6 @@ class SettingActivity: AppCompatActivity() {
             finish()
         }
 
-        // 프로필 이미지 수정 클릭
-        binding.settingEditProfileImgCl.setOnClickListener {
-            editImg()
-        }
-
 
         // 닉데임 수정 클릭
         binding.settingEditProfileNameCl.setOnClickListener {
