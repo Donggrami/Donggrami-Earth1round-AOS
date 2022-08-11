@@ -20,7 +20,8 @@
         android:id="@+id/bottom_edit_name_cv"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
         android:backgroundTint="@color/light_gray"
         android:layout_marginTop="45dp"
         android:layout_marginStart="22dp"
@@ -34,17 +35,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/bttom_edit_name_et"
-                android:layout_width="wrap_content"
+
+            <EditText
+                android:id="@+id/bottom_edit_name_et"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="이름을 입력해주세요"
-                android:textColor="@color/dark_gray"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:hint="이름을 입력해주세요"
+                android:background="@null"
+                android:textColorHint="@color/dark_gray"
                 android:textSize="18sp"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
