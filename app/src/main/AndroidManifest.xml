@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Earth1roundAOS"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:name=".main.login.GlobalApplication">
+<!--        ㄴ로그인이 어플리케이션의 다른 컴포넌트보다 먼저 실행되도록-->
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
