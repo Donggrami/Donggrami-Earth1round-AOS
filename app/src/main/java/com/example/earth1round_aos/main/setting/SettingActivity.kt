@@ -5,9 +5,13 @@ import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.earth1round_aos.databinding.ActivityLoginBinding
 import com.example.earth1round_aos.databinding.ActivitySettingBinding
+import com.example.earth1round_aos.main.data.User
+import com.google.gson.Gson
 
 class SettingActivity: AppCompatActivity() {
     lateinit var binding : ActivitySettingBinding
+    private var gson : Gson = Gson()
+    lateinit var user: User
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,15 +31,17 @@ class SettingActivity: AppCompatActivity() {
         }
     }
 
-    private fun editImg(){
-        var dialog = EditImgBottomSheetDialog()
-
-        dialog.show(this.supportFragmentManager, dialog.tag)
-    }
 
     private fun editName(){
         var dialog = EditNameBottomSheetDialog()
 
         dialog.show(this.supportFragmentManager, dialog.tag)
+    }
+
+//    val user = gson.fromJson("User", User::class.java)
+//    user
+
+    private fun getUser() {
+        val email: String = binding.settingProfileNameTv.text.toString()
     }
 }
