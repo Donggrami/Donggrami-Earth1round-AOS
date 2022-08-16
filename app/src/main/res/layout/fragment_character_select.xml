@@ -6,11 +6,11 @@
 
     <ImageView
         android:id="@+id/character_select_back_iv"
-        android:layout_width="12dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="22dp"
-        android:src="@drawable/ic_arrow_left"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -24,7 +24,8 @@
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@id/character_select_back_iv"/>
+        app:layout_constraintTop_toTopOf="@id/character_select_back_iv"
+        app:layout_constraintBottom_toBottomOf="@id/character_select_back_iv"/>
 
     <View
         android:id="@+id/character_select_view"
@@ -39,27 +40,16 @@
         android:layout_width="230dp"
         android:layout_height="230dp"
         android:layout_marginTop="130dp"
-        android:src="@drawable/img_character_character"
+        android:src="@drawable/char_basic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/character_select_button"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:text="캐릭터 선택 탭"
-        android:textSize="20sp"
-        android:background="@drawable/button_round"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/character_select_character_iv"/>
 
     <ScrollView
         android:id="@+id/character_select_custom_sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/character_select_button">
+        app:layout_constraintTop_toBottomOf="@id/character_select_character_iv">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/character_select_custom_rv"
@@ -67,5 +57,17 @@
             android:layout_height="match_parent" />
 
     </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/character_select_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="캐릭터 선택 완료"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@color/bg_yellow"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

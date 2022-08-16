@@ -3,18 +3,38 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#ECECEC"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/character_prize_item_left"
+        android:layout_width="30dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/style_prize_left_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/character_prize_item_right"
+        android:layout_width="30dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/style_prize_right_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/character_prize_item_cv"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         android:layout_marginTop="10dp"
-        app:cardCornerRadius="10dp"
         app:cardElevation="0dp"
-        app:cardBackgroundColor="@color/dark_gray"
+        app:cardBackgroundColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -24,10 +44,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="15dp"
         android:text="2022"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="#5D5D5D"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@id/character_prize_item_cv"
         app:layout_constraintTop_toTopOf="@id/character_prize_item_cv"/>
 
@@ -35,11 +55,10 @@
         android:id="@+id/character_prize_item_month_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="15dp"
         android:text="May"
-        android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textColor="#5D5D5D"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@id/character_prize_item_cv"
         app:layout_constraintTop_toBottomOf="@id/character_prize_item_year_tv"/>
 
@@ -47,10 +66,9 @@
         android:id="@+id/character_prize_item_date_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:text=". 01"
-        android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textColor="#5D5D5D"
+        android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@id/character_prize_item_month_tv"
         app:layout_constraintTop_toBottomOf="@id/character_prize_item_year_tv"/>
 
@@ -58,25 +76,24 @@
         android:id="@+id/character_prize_item_course_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginEnd="15dp"
         android:text="코스"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="#5D5D5D"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@id/character_prize_item_cv"
-        app:layout_constraintTop_toTopOf="@id/character_prize_item_cv"/>
+        app:layout_constraintBottom_toTopOf="@id/character_prize_item_distance_tv"/>
 
     <TextView
         android:id="@+id/character_prize_item_distance_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
         android:text="거리 km"
-        android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textColor="#4591FF"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/character_prize_item_cv"
-        app:layout_constraintTop_toBottomOf="@id/character_prize_item_year_tv"/>
+        app:layout_constraintBottom_toBottomOf="@id/character_prize_item_cv"/>
 
     <LinearLayout
         android:layout_width="match_parent"
