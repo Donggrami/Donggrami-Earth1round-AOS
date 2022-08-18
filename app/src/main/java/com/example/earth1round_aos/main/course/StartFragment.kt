@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
+import com.example.earth1round_aos.R
 import com.example.earth1round_aos.databinding.FragmentStartBinding
 import com.example.earth1round_aos.main.MainActivity
 import com.example.earth1round_aos.main.data.LocationData
@@ -24,6 +25,7 @@ class StartFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentStartBinding.inflate(inflater, container, false)
+        val startargs = arguments
 
         locationData.apply {
             add(LocationData(1, "경복궁", 100.2, 100.42))
@@ -37,27 +39,30 @@ class StartFragment: Fragment() {
         startRVAdapter.setMyItemClickListener(object : LocationRVAdapter.MyItemClickListener{
             override fun onItemClick(position: Int) {
                 // 동작 입력
-                saveData(locationData[position])
+                saveInfo(locationData[position])
 
             }
 
         })
 
-
-
         return binding.root
     }
 
-    private fun saveData(location: LocationData) {
-        val intent = Intent(context, MainActivity::class.java)
-        val start = LocationData(location.id, location.name, location.latitude, location.longitude)
+    private fun saveInfo(location: LocationData) {
 
-        val bundle = Bundle()
-        bundle.putInt("sId", start.id!!)
-        bundle.putString("sName", start.name)
-        bundle.putDouble("sLat", start.latitude)
-        bundle.putDouble("sLong", start.longitude)
 
-        intent.putExtra("sBundle", bundle)
+        (context as MainActivity).supportFragmentManager.beginTransaction()
+            .replace(R.id.main_frm, CharacterCourseFragment().apply {
+                arguments = bundle.apply {
+                    putInt("sId", location.id!!)
+                    putString("sName", location.name)
+                    putDouble("sLat", location.latitude)
+                    putDouble("sLong", location.longitude)
+                }
+            }).addToBackStack(null).commitAllowingStateLoss()
+
+
+        Log.d("Start Name", bundle.getString("sName").toString())
+
     }
 }
