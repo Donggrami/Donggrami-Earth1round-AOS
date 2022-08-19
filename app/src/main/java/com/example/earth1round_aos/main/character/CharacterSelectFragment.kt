@@ -35,16 +35,16 @@ class CharacterSelectFragment : Fragment() {
         }
 
         selectDatas.apply {
-            add(Select(R.drawable.img_character_character))
-            add(Select(R.drawable.img_character_character))
-            add(Select(R.drawable.img_character_character))
-            add(Select(R.drawable.img_character_character))
-            add(Select(R.drawable.img_character_character))
-            add(Select(R.drawable.img_character_character))
-            add(Select(R.drawable.img_character_character))
-            add(Select(R.drawable.img_character_character))
-            add(Select(R.drawable.img_character_character))
-            add(Select(R.drawable.img_character_character))
+            add(Select(R.drawable.char_basic))
+            add(Select(R.drawable.char_basic))
+            add(Select(R.drawable.char_basic))
+            add(Select(R.drawable.char_basic))
+            add(Select(R.drawable.char_basic))
+            add(Select(R.drawable.char_basic))
+            add(Select(R.drawable.char_basic))
+            add(Select(R.drawable.char_basic))
+            add(Select(R.drawable.char_basic))
+            add(Select(R.drawable.char_basic))
         }
 
         val selectRVAdapter = SelectRVAdapter(selectDatas)
