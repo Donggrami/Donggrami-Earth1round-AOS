@@ -10,11 +10,7 @@
         android:id="@+id/home_bg_space_iv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginBottom="16dp"
-=======
-        android:src="@drawable/bg_home"
->>>>>>> 713ea40710d89191e85da39fa6e3bef9e2e5fea7
         android:scaleType="centerCrop"
         android:src="@drawable/bg_space"
         app:layout_constraintBottom_toBottomOf="parent"

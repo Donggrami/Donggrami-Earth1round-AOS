@@ -74,12 +74,7 @@ class EditNameBottomSheetDialog: BottomSheetDialogFragment() {
             return
         }
 
-<<<<<<< HEAD
         //val authService = getRetrofit().create(AuthRetrofitInterface::class.java) // 레트로핏 가져오기
         //authService.okClick(getUser()).enqueue(object :Callback) // api 호출출
-=======
-//        val authService = getRetrofit().create(AuthRetrofitInterface::class.java) // 레트로핏 가져오기
-//        authService.okClick(getUser()).enqueue(object :Callback) // api 호출출
->>>>>>> 713ea40710d89191e85da39fa6e3bef9e2e5fea7
     }
 }
