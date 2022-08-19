@@ -7,6 +7,14 @@
     tools:context="com.example.donggrami.main.character.CharacterFragment">
 
     <ImageView
+        android:id="@+id/home_bg_space_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_character_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
         android:id="@+id/character_hamburger_btn_iv"
         android:layout_width="35dp"
         android:layout_height="35dp"
@@ -35,7 +43,7 @@
         android:layout_height="90dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/img_character_tropi"
+        android:src="@drawable/ic_chahome_badge"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/character_home_cumulate_tv" />
 
@@ -49,53 +57,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/character_home_cumulate_tv" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/character_home_name_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColor="@color/black"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
         android:text="이름"
+        android:background="@drawable/button_white_circle"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/character_home_character_iv"/>
 
-    <TextView
-        android:id="@+id/character_home_level_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:text="Lv.1"
-        app:layout_constraintStart_toEndOf="@id/character_home_name_tv"
-        app:layout_constraintTop_toBottomOf="@id/character_home_character_iv"/>
-
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageButton
         android:id="@+id/character_home_select_course"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="25dp"
-        android:text="코스선택하기"
-        android:background="@drawable/button_circle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/ic_chahome_course"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/character_home_name_tv" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageButton
         android:id="@+id/character_home_go_earth"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:text="지구\n돌아가기"
-        android:background="@drawable/button_circle"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@id/character_home_select_course"
-        app:layout_constraintTop_toBottomOf="@id/character_home_select_course" />
+        android:layout_marginStart="20dp"
+        android:background="@drawable/chahome_earth"
+        app:layout_constraintStart_toEndOf="@id/character_home_select_course"
+        app:layout_constraintTop_toTopOf="@id/character_home_select_course"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
