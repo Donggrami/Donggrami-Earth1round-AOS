@@ -10,7 +10,11 @@
         android:id="@+id/home_bg_space_iv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginBottom="16dp"
+=======
+        android:src="@drawable/bg_home"
+>>>>>>> 713ea40710d89191e85da39fa6e3bef9e2e5fea7
         android:scaleType="centerCrop"
         android:src="@drawable/bg_space"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +24,6 @@
         android:id="@+id/home_top_menu_cl"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
         android:background="@drawable/style_home_bg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.earth1round_aos.R
 import com.example.earth1round_aos.databinding.FragmentCharacterBinding
 import com.example.earth1round_aos.main.MainActivity
+import com.example.earth1round_aos.main.course.CharacterCourseFragment
 import com.example.earth1round_aos.main.home.HomeFragment
 import com.example.earth1round_aos.main.setting.SettingActivity
 
