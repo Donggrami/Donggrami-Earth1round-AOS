@@ -84,20 +84,9 @@
                 app:layout_constraintBottom_toBottomOf="@id/character_home_cumulate_num_tv"/>
 
             <LinearLayout
-                android:id="@+id/character_calender_month_change_color"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:background="@color/main_yellow"
-                android:orientation="horizontal"
-                android:layout_marginTop="30dp"
-                app:layout_constraintBottom_toTopOf="@id/character_calender_month_change"/>
-
-
-            <LinearLayout
                 android:id="@+id/character_calender_month_change"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/main_yellow"
                 android:orientation="horizontal"
                 android:layout_marginTop="50dp"
                 app:layout_constraintTop_toBottomOf="@id/character_home_cumulate_num_tv">
@@ -107,8 +96,8 @@
                     android:layout_width="45dp"
                     android:layout_height="30dp"
                     android:layout_weight="1"
-                    android:background="@color/main_yellow"
-                    android:src="@drawable/ic_arrow_left_white" />
+                    android:background="@color/white"
+                    android:src="@drawable/ic_left_yellow" />
 
                 <TextView
                     android:id="@+id/character_calender_month_tv"
@@ -119,15 +108,15 @@
                     android:textAlignment="center"
                     android:textStyle="bold"
                     android:textSize="25sp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"/>
 
                 <ImageButton
                     android:id="@+id/character_calender_right_ib"
                     android:layout_width="45dp"
                     android:layout_height="30dp"
                     android:layout_weight="1"
-                    android:background="@color/main_yellow"
-                    android:src="@drawable/ic_arrow_right_white" />
+                    android:background="@color/white"
+                    android:src="@drawable/ic_right_yellow" />
 
             </LinearLayout>
 
