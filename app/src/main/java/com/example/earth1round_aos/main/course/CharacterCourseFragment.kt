@@ -86,7 +86,12 @@ class CharacterCourseFragment : Fragment() {
         ePlace.id = eArg?.getInt("eId")
         sPlace.name = sArg?.getString("sName")
         ePlace.name = eArg?.getString("eName")
-//        place.latitude = arguments?.getDouble("sLat")!!
+
+        sPlace.latitude = sArg?.getDouble("sLat")
+
+//        arguments?.getDouble("sLat")?.let { item ->
+//            sPlace.latitude = item }
+
 //        place.longitude = arguments?.getDouble("sLong")!!
         binding.courseStartTv.text = sPlace.name.toString()
         binding.courseEndTv.text = ePlace.name.toString()

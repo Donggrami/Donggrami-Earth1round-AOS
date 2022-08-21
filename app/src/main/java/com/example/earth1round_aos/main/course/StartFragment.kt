@@ -32,6 +32,8 @@ class StartFragment: Fragment() {
             add(LocationData(2, "에펠탑", 10.2, 10.4))
         }
 
+        savedInstanceState!!.getBundle("start")
+
         val startRVAdapter = LocationRVAdapter(locationData)
         binding.courseStartLocationRv.adapter = startRVAdapter
         binding.courseStartLocationRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
@@ -48,6 +50,11 @@ class StartFragment: Fragment() {
         return binding.root
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putBundle("start", bundle)
+    }
+
     private fun saveInfo(location: LocationData) {
 
 
@@ -56,8 +63,8 @@ class StartFragment: Fragment() {
                 arguments = bundle.apply {
                     putInt("sId", location.id!!)
                     putString("sName", location.name)
-                    putDouble("sLat", location.latitude)
-                    putDouble("sLong", location.longitude)
+                    putDouble("sLat", location.latitude!!)
+                    putDouble("sLong", location.longitude!!)
                 }
             }).addToBackStack(null).commitAllowingStateLoss()
 
