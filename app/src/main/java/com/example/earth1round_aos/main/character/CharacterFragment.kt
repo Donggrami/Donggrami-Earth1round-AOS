@@ -47,7 +47,7 @@ class CharacterFragment : Fragment() {
                 .replace(R.id.main_frm, CharacterCourseFragment()).commitAllowingStateLoss()
         }
 
-        binding.characterHomeCumulateTv.setOnClickListener {
+        binding.characterHomeCumulateCl.setOnClickListener {
             startActivity(Intent(activity, CharacterCalenderActivity::class.java))
         }
 

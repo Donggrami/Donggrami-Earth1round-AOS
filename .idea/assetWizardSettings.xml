@@ -15,12 +15,21 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <entry key="outputName" value="bg_home" />
                             <entry key="sourceFile" value="C:\Users\cutty\Downloads\레이어 1 (1).svg" />
 =======
                             <entry key="outputName" value="ic_arrow_right_white" />
                             <entry key="sourceFile" value="C:\Donggrami_drawable\ic_arrow_right_white.svg" />
 >>>>>>> 5c22089078e22acfb92645814028af38c28f1621
+=======
+                            <entry key="outputName" value="ic_right_yellow" />
+                            <entry key="sourceFile" value="C:\Donggrami_drawable\right_yellow.svg" />
+=======
+                            <entry key="outputName" value="bg_home" />
+                            <entry key="sourceFile" value="C:\Users\cutty\Downloads\레이어 1 (1).svg" />
+>>>>>>> 713ea40710d89191e85da39fa6e3bef9e2e5fea7
+>>>>>>> 86cf596241e836d9b58682c8ced64f807190a91d
                           </map>
                         </option>
                       </PersistentState>

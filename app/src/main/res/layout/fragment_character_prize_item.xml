@@ -91,7 +91,7 @@
         android:layout_marginEnd="15dp"
         android:text="거리 km"
         android:textColor="#4591FF"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@id/character_prize_item_cv"
         app:layout_constraintBottom_toBottomOf="@id/character_prize_item_cv"/>
 
