@@ -11,13 +11,16 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.earth1round_aos.R
 import com.example.earth1round_aos.databinding.FragmentEndBinding
+import com.example.earth1round_aos.main.MainActivity
 import com.example.earth1round_aos.main.data.LocationData
+import com.google.gson.Gson
 
 class EndFragment: Fragment() {
     lateinit var binding: FragmentEndBinding
     private val locationData = ArrayList<LocationData>()
-    private val intent = Intent()
-    private val bundle = Bundle()
+//    val intent = Intent(requireActivity(),CharacterCourseFragment::class.java)
+    val bundle = Bundle()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,6 +28,7 @@ class EndFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentEndBinding.inflate(inflater, container, false)
+
 
         locationData.apply {
             add(LocationData(1, "경복궁", 100.2, 100.42))
@@ -39,8 +43,9 @@ class EndFragment: Fragment() {
             override fun onItemClick(position: Int) {
                 // 동작 입력
                 saveInfo(locationData[position])
-                setDataAtFragment(CharacterCourseFragment(), locationData[position])
-                Log.d("End Bundle", bundle.getBundle("eBundle").toString())
+//                setDataAtFragment(CharacterCourseFragment(), locationData[position])
+//                startActivity(intent)
+                Log.d("End Bundle Name", bundle.getString("eName").toString())
             }
 
         })
@@ -49,32 +54,21 @@ class EndFragment: Fragment() {
     }
 
     private fun saveInfo(location: LocationData) {
-        bundle.apply {
-            putInt("eId", location.id!!)
-            putString("eName", location.name)
-            putDouble("eLat", location.latitude)
-            putDouble("eLong", location.longitude)
-        }
 
-        Log.d("End Name", bundle.getString("endName").toString())
 
-        Bundle().putBundle("eBundle", bundle)
+        (context as MainActivity).supportFragmentManager.beginTransaction()
+            .replace(R.id.main_frm, CharacterCourseFragment().apply {
+                arguments = bundle.apply {
+                    putInt("eId", location.id!!)
+                    putString("eName", location.name)
+                    putDouble("eLat", location.latitude!!)
+                    putDouble("eLong", location.longitude!!)
+                }
+            }).commit()
+
+
+        Log.d("End Name", bundle.getString("eName").toString())
+
     }
 
-    fun setDataAtFragment(fragment:Fragment, location:LocationData){
-        bundle.apply {
-            putInt("eId", location.id!!)
-            putString("eName", location.name)
-            putDouble("eLat", location.latitude)
-            putDouble("eLong", location.longitude)
-        }
-
-        fragment.arguments = bundle
-        setFragment(fragment)
-    }
-    fun setFragment(fragment: Fragment){
-        val transaction = childFragmentManager.beginTransaction()
-        transaction.replace(R.id.main_frm,fragment)
-        transaction.commit()
-    }
 }
