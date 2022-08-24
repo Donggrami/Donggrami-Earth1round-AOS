@@ -32,7 +32,6 @@ class StartFragment: Fragment() {
             add(LocationData(2, "에펠탑", 10.2, 10.4))
         }
 
-        savedInstanceState!!.getBundle("start")
 
         val startRVAdapter = LocationRVAdapter(locationData)
         binding.courseStartLocationRv.adapter = startRVAdapter
@@ -42,6 +41,8 @@ class StartFragment: Fragment() {
             override fun onItemClick(position: Int) {
                 // 동작 입력
                 saveInfo(locationData[position])
+                onSaveInstanceState(bundle)
+                savedInstanceState!!.getBundle("start")
 
             }
 
@@ -52,11 +53,11 @@ class StartFragment: Fragment() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putBundle("start", bundle)
+
+        outState.putBundle("start", outState)
     }
 
     private fun saveInfo(location: LocationData) {
-
 
         (context as MainActivity).supportFragmentManager.beginTransaction()
             .replace(R.id.main_frm, CharacterCourseFragment().apply {

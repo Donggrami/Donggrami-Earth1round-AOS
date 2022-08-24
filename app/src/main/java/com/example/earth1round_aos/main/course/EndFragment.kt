@@ -61,8 +61,8 @@ class EndFragment: Fragment() {
                 arguments = bundle.apply {
                     putInt("eId", location.id!!)
                     putString("eName", location.name)
-                    putDouble("eLat", location.latitude)
-                    putDouble("eLong", location.longitude)
+                    putDouble("eLat", location.latitude!!)
+                    putDouble("eLong", location.longitude!!)
                 }
             }).commit()
 
